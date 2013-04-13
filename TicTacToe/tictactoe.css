@@ -7,13 +7,14 @@
 	width: 200px;
 }
 
-.square .ui-btn-text {
-    font-size: 34px; 
+#squares .ui-btn-text {
+    font-size: 34px; /* Play with font size of the text */
    	font-family: Helvetica, Arial, sans-serif;
    	font-weight: bold;
 } 
 
-.square .ui-btn-inner {
+
+#squares .ui-btn-inner {
 	padding: 0;
 	padding-top: 5px;
 }
