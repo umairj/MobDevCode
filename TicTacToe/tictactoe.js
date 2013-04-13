@@ -21,7 +21,7 @@ TicTacToeGame.prototype.getActivePlayer = function() {
 
 TicTacToeGame.prototype.makeMoveTo = function(fieldId) {
 	if(!this.canSetTo(fieldId)) {
-	//	alert('This field is already taken.');
+		alert('This field is already taken.');
 		return;
 	}
 
@@ -46,6 +46,9 @@ TicTacToeGame.prototype.getCurrentMarker = function() {
 
 TicTacToeGame.prototype.getFieldTextAt = function(fieldId) {
 	return this.state[fieldId];
+//  The line below will fix the newGame error :) 
+//  Can you explain why?
+//	return this.state[fieldId] || "&nbsp;";  
 };
 
 TicTacToeGame.prototype.getValidFieldIds = function() {
@@ -61,6 +64,13 @@ function handleFieldClick(fieldId) {
 	updateGameBoard();
 }
 
+function newGame() {
+	// this is cu
+	game.reset();
+	updateActivePlayer();
+	updateGameBoard();
+}
+
 function updateActivePlayer() {
 	$('#playerName').html(game.getActivePlayer());
 }
@@ -69,7 +79,6 @@ function updateGameBoard() {
 	for (var i = 0; i < game.getValidFieldIds().length; i++) {
 		var fieldId = game.getValidFieldIds()[i];
 		var field = $("#field_" + fieldId + " .ui-btn-text");
-		if(!field.length) continue;
 		
 		field.html(game.getFieldTextAt(fieldId));
 	}
