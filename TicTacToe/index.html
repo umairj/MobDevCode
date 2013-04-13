@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tic Tac Toe</title>
+		
+		<!-- copied from http://jquerymobile.com/download/ -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+		<!-- end of citation -->
+		
+		<link rel="stylesheet" href="tictactoe.css" />		
+		<script src="tictactoe.js"></script>
+	</head>
+	
+	<body>
+		<!-- page structure copied from http://jquerymobile.com/demos/1.0a3/docs/pages/docs-pages.html -->
+		<div data-role="page"> 
+			
+			
+			<div data-role="header">
+				<h1>Tic Tac Toe</h1>
+				<a href="javascript:window.location.reload()" class="ui-btn-right">New Game</a>
+			</div> <!-- content -->
+			
+			
+			
+			
+			
+			<div data-role="content" id="game-board">
+				
+				<div id="infoLabel" class="centered">
+					<b><div id="playerName">Player One</div></b><br/>
+					Make your move!
+				</div> 
+				
+				<div id="squares" class="centered">
+					<p>
+					    <a href="javascript:handleFieldClick('TL')" data-role="button" data-inline="true" class="square" id="field_TL">&nbsp;</a>
+					    <a href="javascript:handleFieldClick('TC')" data-role="button" data-inline="true" class="square" id="field_TC">&nbsp;</a>
+					    <a href="javascript:handleFieldClick('TR')" data-role="button" data-inline="true" class="square" id="field_TR">&nbsp;</a>
+					</p>
+					<p>
+					    <a href="javascript:handleFieldClick('CL')" data-role="button" data-inline="true" class="square" id="field_CL">&nbsp;</a>
+					    <a href="javascript:handleFieldClick('CC')" data-role="button" data-inline="true" class="square" id="field_CC">&nbsp;</a>
+					    <a href="javascript:handleFieldClick('CR')" data-role="button" data-inline="true" class="square" id="field_CR">&nbsp;</a>
+					</p>
+					<p>
+					    <a href="javascript:handleFieldClick('BL')" data-role="button" data-inline="true" class="square" id="field_BL">&nbsp;</a>
+					    <a href="javascript:handleFieldClick('BC')" data-role="button" data-inline="true" class="square" id="field_BC">&nbsp;</a>
+					    <a href="javascript:handleFieldClick('BR')" data-role="button" data-inline="true" class="square" id="field_BR">&nbsp;</a>
+					</p>
+				</div> <!-- squares -->
+				
+				
+			</div> <!-- content -->
+			
+			
+			
+			<div data-role="footer" id="footer">
+				
+			</div> <!-- footer --> 
+		</div> 
+	</body>
+</html>
